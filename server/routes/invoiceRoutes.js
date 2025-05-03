@@ -10,7 +10,7 @@ const { analyzeInvoice } = require('../services/formRecognizerService');
 // Configure multer for file upload
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
-    const uploadDir = 'uploads';
+    const uploadDir = '/tmp/uploads';
     if (!fs.existsSync(uploadDir)) {
       fs.mkdirSync(uploadDir);
     }
